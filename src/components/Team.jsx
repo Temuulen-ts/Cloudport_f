@@ -300,7 +300,7 @@ function ViewMembersModal({ isOpen, onClose, teamName, members, isLoading }) {
                                     <p className="text-sm font-medium text-gray-900">
                                         {member.name || member.email}
                                     </p>
-                                    <p className="text-xs text-gray-400">{member.email}</p>
+                                    <p className="text-xs text-gray-400">{member}</p>
                                 </div>
                                 <div className="text-xs">
                                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -462,7 +462,6 @@ export default function Teams() {
                 },
                 body: JSON.stringify({ email })
             });
-
             if (!res.ok) {
                 const error = await res.json();
                 throw new Error(error.message || "Failed to add member");
@@ -499,12 +498,12 @@ export default function Teams() {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` }
             });
-
             if (!res.ok) {
                 throw new Error("Failed to load team members");
             }
 
             const members = await res.json();
+            
             setTeamMembers(members);
         } catch (e) {
             console.error("Load members error:", e);

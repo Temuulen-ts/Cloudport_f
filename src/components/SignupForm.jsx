@@ -34,23 +34,6 @@ export default function SignupForm() {
     return (
         <div className='relative w-[400px] text-white shadow-2xl bg-white/10 p-8 border border-white/20 rounded-2xl backdrop-blur-xl'>
             <h2 className='relative text-3xl text-center mb-6 font-bold'>Create an account</h2>
-
-            <div className='flex justify-evenly'>
-                <button className='w-full py-3 flex gap-3 bg-white items-center justify-center border rounded-xl text-medium text-gray-600'>
-                    <FcGoogle size={20} />
-                    Google
-                </button>
-                <div className='w-5'></div>
-                <button className='w-full py-3 flex gap-3 bg-white items-center justify-center border rounded-xl text-medium text-gray-600'>
-                    <FaFacebook className='text-blue-600' />
-                    Facebook
-                </button>
-            </div>
-
-            <div className="text-center text-md text-white text-bold mt-2 mb-4">
-                Or
-            </div>
-
             <form onSubmit={handleSubmit}>
                 {/* Email */}
                 <div className="mb-4">
