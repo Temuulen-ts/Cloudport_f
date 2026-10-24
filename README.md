@@ -427,12 +427,6 @@ Contributions are welcome.
 
 <br />
 
-## 📄 License
-
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
-
-<br />
-
 <div align="center">
 
 Built by [**Temuulen**](https://github.com/Temuulen-ts)
